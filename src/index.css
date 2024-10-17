@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black-gradient: linear-gradient(
+    144.39deg,
+    #ffffff -278.56%,
+    #6d6d6d -78.47%,
+    #11101d 91.61%
+  );
+  --card-shadow: 0px 20px 100px -10px rgba(66, 71, 91, 0.1);
+}
+
+* {
+  scroll-behavior: smooth;
+  font-family: Lato;
+}
+
+.sidebar {
+  -webkit-animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: slide-left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@-webkit-keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-left {
+  0% {
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+}
+
+.background {
+  background-image: url("assets/bg1.jpeg"); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: grid;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  isolation: isolate;
+}
+
+.background::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  inset: 0;
+  background: #09071a;
+  opacity: 0.7;
+  @apply h-[300px] md:h-[450px] sm:min-h-[350px];
+}
+
+.hov:hover {
+  background: none;
+  border: solid white 1px;
+  transition: 1500ms ease-in-out;
+}
+
+.background2 {
+  background-image: url("assets/ab.jpg"); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: grid;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  isolation: isolate;
+}
+
+.background2::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  inset: 0;
+  background: #09071a;
+  opacity: 0.7;
+  @apply h-[450px] md:h-screen sm:min-h-[650px];
+}
+
+.spin-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.spin-div .content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spin-div .front,
+.spin-div .back {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.spin-div .back {
+  transform: rotateY(180deg);
+}
+
+.spin-animation {
+  animation: spin 1s forwards;
+  transform-style: preserve-3d;
+}
+
+.spin-animation-reverse {
+  animation: spin-reverse 1s forwards;
+  transform-style: preserve-3d;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+  }
+}
+
+@keyframes spin-reverse {
+  0% {
+    transform: rotateY(180deg);
+  }
+  100% {
+    transform: rotateY(0deg);
+  }
+}
+
+.background3 {
+  background-image: url("assets/edu1.jpg"); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: grid;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  isolation: isolate;
+  @apply rounded-2xl;
+}
+
+.background3::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  inset: 0;
+  background: #09071a;
+  opacity: 0.7;
+  @apply h-[350px] rounded-2xl  sm:min-h-[350px];
+}
+
+.background4 {
+  background-image: url("assets/ter1.jpg"); /* Replace with the path to your image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: grid;
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  isolation: isolate;
+  @apply rounded-2xl;
+}
+
+.background4::after {
+  content: "";
+  position: absolute;
+  z-index: -10;
+  inset: 0;
+  background: #09071a;
+  opacity: 0.7;
+  @apply h-[350px] rounded-2xl  sm:min-h-[350px];
+}
+
+.tran {
+  transition: 1500ms ease-in-out;
+}
+
+.sha {
+  box-shadow: 0px 0px 30px rgba(33, 33, 33, 0.399);
+}
