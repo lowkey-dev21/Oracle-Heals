@@ -12,7 +12,7 @@ const AboutInit = () => {
             <img
               src={img1}
               alt=""
-              className="  md:h-[400px] h-[250px] mt-5 ml-[-3rem] md:ml-[-7rem]  rounded-lg  "
+              className="  md:h-[500px] h-[350px] mt-5 ml-[-3rem] md:ml-[-7rem]  rounded-lg  "
             />
             <img
               src={img2}
